@@ -1,0 +1,6 @@
+Topic: test
+Message: Hello ja tu hej
+
+Topic: test
+Message: To jeszcze raz ja
+
