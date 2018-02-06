@@ -15,9 +15,9 @@ import java.nio.file.StandardOpenOption;
 @Service
 public class FileService {
 
-    public void writeMessage(String topic, MqttMessage message) {
+    public void writeMessage(String topic, String content) {
 
-        String line = "Topic: " + topic + "\n" + "Message: " + message + "\n\n";
+        String line = "Topic: " + topic + "\n" + "Message: " + content + "\n\n";
 
         File file = new File("data/" + topic + ".txt");
 
@@ -42,17 +42,6 @@ public class FileService {
             e.printStackTrace();
         }
     }
-
-//    private void write(String line, String outputPath) {
-//
-//        try(BufferedWriter fileWriter = new BufferedWriter(new FileWriter(outputPath))) {
-//            fileWriter.write(line);
-//        } catch (FileAlreadyExistsException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     private void write(String line, String outputPath) {
 
