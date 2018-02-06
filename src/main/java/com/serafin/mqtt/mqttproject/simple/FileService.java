@@ -1,6 +1,7 @@
 package com.serafin.mqtt.mqttproject.simple;
 
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,6 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
+@Service
 public class FileService {
 
     public void writeMessage(String topic, MqttMessage message) {
