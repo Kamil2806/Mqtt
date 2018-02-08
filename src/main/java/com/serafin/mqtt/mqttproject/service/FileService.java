@@ -1,4 +1,4 @@
-package com.serafin.mqtt.mqttproject.simple;
+package com.serafin.mqtt.mqttproject.service;
 
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.springframework.stereotype.Service;
@@ -11,6 +11,8 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class FileService {
@@ -29,7 +31,7 @@ public class FileService {
 
         String outputPath = "data/" + topic + ".txt";
 
-        write(line, outputPath);
+        writeToFile(line, outputPath);
     }
 
     private void createFileToWrite(String topic) {
@@ -43,7 +45,7 @@ public class FileService {
         }
     }
 
-    private void write(String line, String outputPath) {
+    private void writeToFile(String line, String outputPath) {
 
         try {
             Files.write(Paths.get(outputPath), line.getBytes(), StandardOpenOption.APPEND);
@@ -52,5 +54,19 @@ public class FileService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public List<String> getDataFromFile(String input) {
+
+        List<String> datas = new ArrayList<>();
+        String inputPath = "data/input/" + input + ".txt";
+
+        try {
+            datas = Files.readAllLines(Paths.get(inputPath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return datas;
     }
 }

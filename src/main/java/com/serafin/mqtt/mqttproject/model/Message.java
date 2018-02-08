@@ -1,4 +1,4 @@
-package com.serafin.mqtt.mqttproject.simple;
+package com.serafin.mqtt.mqttproject.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.serafin.mqtt.mqttproject.simple;
+package com.serafin.mqtt.mqttproject.exeptions;
 
 import lombok.AllArgsConstructor;
 

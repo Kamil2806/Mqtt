@@ -1,6 +1,6 @@
-package com.serafin.mqtt.mqttproject;
+package com.serafin.mqtt.mqttproject.web.dto;
 
-import com.serafin.mqtt.mqttproject.simple.Message;
+import com.serafin.mqtt.mqttproject.model.Message;
 
 public class MessageDTO {
 

@@ -1,5 +1,6 @@
-package com.serafin.mqtt.mqttproject.simple;
+package com.serafin.mqtt.mqttproject.mqtt;
 
+import com.serafin.mqtt.mqttproject.mqtt.SimpleMqttCallBack;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 
@@ -20,7 +21,6 @@ public class Subscriber {
     client.connect();
 
     client.subscribe(topic);
-
   }
 
 }

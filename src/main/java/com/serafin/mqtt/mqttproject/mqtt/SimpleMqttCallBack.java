@@ -1,4 +1,4 @@
-package com.serafin.mqtt.mqttproject.simple;
+package com.serafin.mqtt.mqttproject.mqtt;
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
